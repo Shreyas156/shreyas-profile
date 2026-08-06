@@ -3,10 +3,13 @@
 document.addEventListener('DOMContentLoaded', () => {
   initThemeToggle();
   initNavigation();
+  initTerminalRunner();
   initSkillsFilter();
   initResumeModal();
   initContactForm();
+  initCopyEmail();
   initScrollAnimations();
+  initMouseSpotlight();
 });
 
 /* ----------------------------------------------------
@@ -64,9 +67,93 @@ function initNavigation() {
 }
 
 /* ----------------------------------------------------
- * 3. QA & Automation Playground Simulators
+ * 3. Interactive Terminal Test Runner Widget
  * ---------------------------------------------------- */
+function initTerminalRunner() {
+  const btnCypress = document.getElementById('termRunCypress');
+  const btnApi = document.getElementById('termRunApi');
+  const btnN8n = document.getElementById('termRunN8n');
+  const terminalBody = document.getElementById('terminalBody');
+  const counterEl = document.getElementById('liveTestCounter');
 
+  if (!terminalBody) return;
+
+  let currentCount = 1048;
+
+  btnCypress.addEventListener('click', async () => {
+    setTermBtnActive(btnCypress);
+    terminalBody.innerHTML = `
+      <div class="term-line"><span class="term-cyan">$ npx cypress run --spec "cypress/e2e/regression.cy.js"</span></div>
+      <div class="term-line"><span class="term-muted">[${getFormattedTime()}] Initializing Cypress test suite...</span></div>
+    `;
+    await delay(500);
+    appendTermLine(`<span class="term-green">✓ [PASS] UI Component Render & Accessibility Checks (140ms)</span>`);
+    await delay(400);
+    appendTermLine(`<span class="term-green">✓ [PASS] Cross-Browser Selector & Viewport Matching (95ms)</span>`);
+    await delay(500);
+    appendTermLine(`<span class="term-green">✓ [PASS] Regression Suite: 18 Test Cases Passed (2.1s)</span>`);
+    await delay(300);
+    appendTermLine(`<span class="term-yellow">SUCCESS: 0 REGRESSION DEFECTS DETECTED</span>`);
+    incrementCounter();
+  });
+
+  btnApi.addEventListener('click', async () => {
+    setTermBtnActive(btnApi);
+    terminalBody.innerHTML = `
+      <div class="term-line"><span class="term-purple">$ newman run Postman_WebAPI_Collection.json</span></div>
+      <div class="term-line"><span class="term-muted">[${getFormattedTime()}] Executing Postman WebAPI endpoint checks...</span></div>
+    `;
+    await delay(500);
+    appendTermLine(`<span class="term-green">✓ [200 OK] GET /api/v1/health-check (45ms)</span>`);
+    await delay(400);
+    appendTermLine(`<span class="term-green">✓ [200 OK] POST /api/v1/validate-payload (82ms)</span>`);
+    await delay(500);
+    appendTermLine(`<span class="term-green">✓ [PASS] PostgreSQL Database Entry Verification (34ms)</span>`);
+    await delay(300);
+    appendTermLine(`<span class="term-cyan">API INTEGRITY: 100% SCHEMA COMPLIANCE</span>`);
+    incrementCounter();
+  });
+
+  btnN8n.addEventListener('click', async () => {
+    setTermBtnActive(btnN8n);
+    terminalBody.innerHTML = `
+      <div class="term-line"><span class="term-yellow">$ curl -X POST https://n8n-automation.internal/webhook/bug-logger</span></div>
+      <div class="term-line"><span class="term-muted">[${getFormattedTime()}] Triggering n8n workflow pipeline...</span></div>
+    `;
+    await delay(500);
+    appendTermLine(`<span class="term-green">✓ Webhook Received HTTP 200 OK</span>`);
+    await delay(400);
+    appendTermLine(`<span class="term-green">✓ OpenProject Ticket Generated (BUG-84920)</span>`);
+    await delay(500);
+    appendTermLine(`<span class="term-green">✓ Automated Developer Alert Dispatched</span>`);
+    await delay(300);
+    appendTermLine(`<span class="term-purple">AUTOMATION PIPELINE EXECUTION COMPLETE</span>`);
+    incrementCounter();
+  });
+
+  function setTermBtnActive(activeBtn) {
+    [btnCypress, btnApi, btnN8n].forEach(b => b.classList.remove('active'));
+    activeBtn.classList.add('active');
+  }
+
+  function appendTermLine(htmlContent) {
+    const div = document.createElement('div');
+    div.className = 'term-line';
+    div.innerHTML = htmlContent;
+    terminalBody.appendChild(div);
+    terminalBody.scrollTop = terminalBody.scrollHeight;
+  }
+
+  function incrementCounter() {
+    currentCount += 4;
+    counterEl.textContent = currentCount.toLocaleString();
+  }
+
+  function getFormattedTime() {
+    const d = new Date();
+    return d.toTimeString().split(' ')[0];
+  }
+}
 
 /* Helper Delay Function */
 function delay(ms) {
@@ -145,7 +232,7 @@ function initResumeModal() {
 }
 
 /* ----------------------------------------------------
- * 6. Contact Form & Toast Notifications
+ * 6. Contact Form & Email Copy
  * ---------------------------------------------------- */
 function initContactForm() {
   const form = document.getElementById('contactForm');
@@ -157,6 +244,16 @@ function initContactForm() {
     showToast(`Thank you ${name}! Your message has been sent to Shreyas.`);
     form.reset();
   });
+}
+
+function initCopyEmail() {
+  const copyBtn = document.getElementById('copyEmailBtn');
+  if (copyBtn) {
+    copyBtn.addEventListener('click', () => {
+      navigator.clipboard.writeText('shreyaspeherkar04@gmail.com');
+      showToast('Email address copied to clipboard!');
+    });
+  }
 }
 
 function showToast(message) {
@@ -174,4 +271,20 @@ function showToast(message) {
     toast.style.transition = 'opacity 0.3s ease';
     setTimeout(() => toast.remove(), 300);
   }, 4000);
+}
+
+/* ----------------------------------------------------
+ * 7. 3D Mouse Spotlight Effect on Cards
+ * ---------------------------------------------------- */
+function initMouseSpotlight() {
+  const cards = document.querySelectorAll('.glass-card');
+  cards.forEach(card => {
+    card.addEventListener('mousemove', (e) => {
+      const rect = card.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+      card.style.setProperty('--mouse-x', `${x}px`);
+      card.style.setProperty('--mouse-y', `${y}px`);
+    });
+  });
 }

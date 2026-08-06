@@ -93,44 +93,44 @@
         </div>
       </div>
 
-      <!-- Hero Visual Stats Card -->
+      <!-- Hero Visual Interactive Terminal Runner Widget -->
       <div class="hero-visual">
-        <div class="glass-card hero-card-widget">
-          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:1.5rem;">
-            <div style="font-family:var(--font-code); font-size:0.85rem; color:var(--primary-emerald); display:flex; align-items:center; gap:0.4rem;">
-              <span style="width:8px; height:8px; background:var(--primary-emerald); border-radius:50%; display:inline-block;"></span>
-              SYSTEM_QUALITY_METRICS
+        <div class="terminal-window">
+          <div class="terminal-header">
+            <div class="terminal-dots">
+              <span class="dot dot-red"></span>
+              <span class="dot dot-yellow"></span>
+              <span class="dot dot-green"></span>
             </div>
-            <span style="font-size:0.8rem; color:var(--text-muted); font-family:var(--font-code);">v2.4.0</span>
+            <span style="font-size:0.75rem; color:var(--text-sub);">cy-test-runner ~ zsh</span>
+            <span style="font-size:0.75rem; color:var(--primary-emerald);">● ACTIVE</span>
           </div>
 
-          <div class="stats-grid">
-            <div class="stat-box">
-              <div class="stat-number">99.8%</div>
-              <div class="stat-label">Defect Prevention & Quality Stability</div>
-            </div>
-            <div class="stat-box">
-              <div class="stat-number">3+</div>
-              <div class="stat-label">QA Automation Tools Built</div>
-            </div>
-            <div class="stat-box">
-              <div class="stat-number">1000+</div>
-              <div class="stat-label">API Endpoints & SQL Checks Executed</div>
-            </div>
-            <div class="stat-box">
-              <div class="stat-number">100%</div>
-              <div class="stat-label">Cross-Platform Coverage (Web/Android)</div>
-            </div>
+          <div class="terminal-controls">
+            <button class="term-btn active" id="termRunCypress">▶ Run Cypress E2E</button>
+            <button class="term-btn" id="termRunApi">▶ Postman API Test</button>
+            <button class="term-btn" id="termRunN8n">▶ Trigger n8n Webhook</button>
           </div>
 
-          <div style="margin-top:1.5rem; background:rgba(4,7,13,0.7); padding:1rem; border-radius:var(--radius-sm); border:1px solid var(--border-glass);">
-            <div style="font-family:var(--font-code); font-size:0.8rem; color:var(--text-sub); display:flex; justify-content:space-between; margin-bottom:0.4rem;">
-              <span>Automated Test Pass Rate</span>
-              <span style="color:var(--primary-emerald); font-weight:600;">98.4% Passed</span>
-            </div>
-            <div style="height:6px; background:rgba(255,255,255,0.08); border-radius:10px; overflow:hidden;">
-              <div style="width:98.4%; height:100%; background:linear-gradient(90deg, var(--primary-emerald), var(--accent-cyan));"></div>
-            </div>
+          <div class="terminal-body" id="terminalBody">
+            <div class="term-line"><span class="term-cyan">$ npx cypress run --spec "cypress/e2e/regression.cy.js"</span></div>
+            <div class="term-line"><span class="term-muted">[10:14:02] Initializing Cypress test suite...</span></div>
+            <div class="term-line"><span class="term-green">✓ [PASS] UI Component Render & Accessibility Checks (140ms)</span></div>
+            <div class="term-line"><span class="term-green">✓ [PASS] WebAPI Request/Response Validation 200 OK (85ms)</span></div>
+            <div class="term-line"><span class="term-green">✓ [PASS] PostgreSQL SQL Backend Verification (42ms)</span></div>
+            <div class="term-line"><span class="term-green">✓ [PASS] SEO Meta Tags & JSON-LD Schema Validation (60ms)</span></div>
+            <div class="term-line" style="margin-top:0.5rem;"><span class="term-yellow">ALL 4 SUITES PASSED — 0 DEFECTS FOUND (100% REGRESSION STABILITY)</span></div>
+          </div>
+        </div>
+
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:0.75rem; margin-top:1rem;">
+          <div class="stat-box" style="padding:0.75rem;">
+            <div class="stat-number" style="font-size:1.5rem;">99.8%</div>
+            <div class="stat-label" style="font-size:0.75rem;">Defect Prevention</div>
+          </div>
+          <div class="stat-box" style="padding:0.75rem;">
+            <div class="stat-number" style="font-size:1.5rem;" id="liveTestCounter">1,048</div>
+            <div class="stat-label" style="font-size:0.75rem;">Automated Checks Run</div>
           </div>
         </div>
       </div>
@@ -313,6 +313,54 @@
           <a href="#contact" class="btn btn-outline" style="width:100%; margin-top:auto; text-align:center;">
             Inquire Details
           </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- QA Automation Pipeline Visualizer Section -->
+    <div class="container" style="margin-top:4rem;">
+      <div class="glass-card pipeline-visualizer">
+        <div style="text-align:center;">
+          <span class="section-tag">
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+            END-TO-END QA ARCHITECTURE
+          </span>
+          <h3 style="font-size:1.8rem; margin-top:0.5rem;">How Shreyas Automates Quality Pipelines</h3>
+          <p style="color:var(--text-sub); font-size:0.95rem; max-width:600px; margin:0.5rem auto 0 auto;">
+            From UI/API test execution to instant n8n webhook triggers and automated bug ticket creation.
+          </p>
+        </div>
+
+        <div class="pipeline-flow">
+          <div class="pipeline-step">
+            <div class="pipeline-step-num">1</div>
+            <div class="pipeline-step-title">Web & Mobile UI</div>
+            <div class="pipeline-step-desc">DOM element validation, cross-browser checks & SEO schema audit.</div>
+          </div>
+
+          <div class="pipeline-step">
+            <div class="pipeline-step-num">2</div>
+            <div class="pipeline-step-title">Cypress & Postman</div>
+            <div class="pipeline-step-desc">Automated JS test scripts & Postman WebAPI request payload runs.</div>
+          </div>
+
+          <div class="pipeline-step">
+            <div class="pipeline-step-num">3</div>
+            <div class="pipeline-step-title">SQL DB Integrity</div>
+            <div class="pipeline-step-desc">Direct database query verification ensuring data integrity.</div>
+          </div>
+
+          <div class="pipeline-step">
+            <div class="pipeline-step-num">4</div>
+            <div class="pipeline-step-title">n8n Automation</div>
+            <div class="pipeline-step-desc">Automated webhook routing, bug tracking & team alert dispatch.</div>
+          </div>
+
+          <div class="pipeline-step">
+            <div class="pipeline-step-num">5</div>
+            <div class="pipeline-step-title">OpenProject Ticket</div>
+            <div class="pipeline-step-desc">Instant bug logging with full reproduction steps & dev severity.</div>
+          </div>
         </div>
       </div>
     </div>
@@ -568,6 +616,7 @@
               <div>
                 <div style="font-size:0.85rem; color:var(--text-muted);">Email Address</div>
                 <a href="mailto:shreyaspeherkar04@gmail.com" style="font-weight:600; color:var(--text-main);">shreyaspeherkar04@gmail.com</a>
+                <button class="copy-btn" id="copyEmailBtn" title="Copy email address">Copy</button>
               </div>
             </div>
 
