@@ -1,0 +1,813 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shreyas Bhaginath Peherkar | Executive QA Engineer & Automation Specialist</title>
+  <meta name="description" content="Portfolio of Shreyas Bhaginath Peherkar - Executive QA Engineer specializing in Cypress Automation, n8n Workflow Automation, WebAPI Postman Testing, and Defect Prevention at IndiaMART InterMESH Ltd.">
+  <meta name="keywords" content="Shreyas Peherkar, QA Engineer, Cypress Automation, n8n, API Testing, Postman, OpenProject, Software Testing, Quality Assurance Portfolio">
+
+  <!-- Open Graph / Social Media -->
+  <meta property="og:title" content="Shreyas Peherkar - QA Automation & Engineering Portfolio">
+  <meta property="og:description" content="Executive QA Engineer at IndiaMART InterMESH Ltd specializing in Cypress Automation, WebAPI testing, n8n workflows & defect lifecycle management.">
+  <meta property="og:type" content="website">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Ambient Glowing Background -->
+  <div class="bg-glow-container" aria-hidden="true">
+    <div class="bg-glow-1"></div>
+    <div class="bg-glow-2"></div>
+  </div>
+
+  <!-- Header & Navigation -->
+  <header class="navbar">
+    <div class="container nav-container">
+      <a href="#hero" class="brand-logo" id="brandLogoLink">
+        <div class="brand-avatar">SP</div>
+        <span>Shreyas<span class="text-gradient">.qa</span></span>
+      </a>
+
+      <nav aria-label="Main Navigation">
+        <ul class="nav-links">
+          <li><a href="#playground" class="nav-link">QA Playground</a></li>
+          <li><a href="#experience" class="nav-link">Experience</a></li>
+          <li><a href="#projects" class="nav-link">Projects</a></li>
+          <li><a href="#skills" class="nav-link">Skills</a></li>
+          <li><a href="#education" class="nav-link">Education</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="btn btn-icon theme-toggle-btn" id="themeToggle" aria-label="Toggle Light/Dark Theme" title="Toggle Theme">
+          <svg id="themeIcon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg>
+        </button>
+        <button class="btn btn-primary" id="openResumeBtn">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><line x1="10" y1="9" x2="8" y2="9"/></svg>
+          View Resume
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="hero" class="hero-section">
+    <div class="container hero-grid">
+      <div class="hero-content">
+        <div class="status-badge">
+          <span class="pulse-dot"></span>
+          Executive QA Engineer @ IndiaMART InterMESH Ltd
+        </div>
+
+        <h1 class="hero-title">
+          Hi, I'm <span class="text-gradient">Shreyas Peherkar</span>
+        </h1>
+        <div class="hero-subtitle">
+          QA Automation Engineer & Workflow Optimization Specialist
+        </div>
+
+        <p class="hero-bio">
+          Passionate Executive QA Engineer with robust experience in Cypress UI automation, Postman WebAPI validation, SQL queries, and n8n workflow automation. Dedicated to defect prevention, cross-platform testing, and streamlining release quality across web and mobile ecosystems.
+        </p>
+
+        <div class="hero-pills">
+          <span class="pill-item">⚡ Cypress Automation</span>
+          <span class="pill-item">🔄 n8n Workflows</span>
+          <span class="pill-item">🌐 Postman WebAPI</span>
+          <span class="pill-item">🗄️ SQL Validation</span>
+          <span class="pill-item">🔍 SEO Audits</span>
+          <span class="pill-item">📋 Agile & STLC</span>
+        </div>
+
+        <div class="hero-cta">
+          <a href="#playground" class="btn btn-primary">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+            Try Live QA Playground
+          </a>
+          <a href="#projects" class="btn btn-outline">
+            View Projects
+          </a>
+          <a href="mailto:shreyaspeherkar04@gmail.com" class="btn btn-outline">
+            Contact Me
+          </a>
+        </div>
+      </div>
+
+      <!-- Hero Visual Stats Card -->
+      <div class="hero-visual">
+        <div class="glass-card hero-card-widget">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:1.5rem;">
+            <div style="font-family:var(--font-code); font-size:0.85rem; color:var(--primary-emerald); display:flex; align-items:center; gap:0.4rem;">
+              <span style="width:8px; height:8px; background:var(--primary-emerald); border-radius:50%; display:inline-block;"></span>
+              SYSTEM_QUALITY_METRICS
+            </div>
+            <span style="font-size:0.8rem; color:var(--text-muted); font-family:var(--font-code);">v2.4.0</span>
+          </div>
+
+          <div class="stats-grid">
+            <div class="stat-box">
+              <div class="stat-number">99.8%</div>
+              <div class="stat-label">Defect Prevention & Quality Stability</div>
+            </div>
+            <div class="stat-box">
+              <div class="stat-number">3+</div>
+              <div class="stat-label">QA Automation Tools Built</div>
+            </div>
+            <div class="stat-box">
+              <div class="stat-number">1000+</div>
+              <div class="stat-label">API Endpoints & SQL Checks Executed</div>
+            </div>
+            <div class="stat-box">
+              <div class="stat-number">100%</div>
+              <div class="stat-label">Cross-Platform Coverage (Web/Android)</div>
+            </div>
+          </div>
+
+          <div style="margin-top:1.5rem; background:rgba(4,7,13,0.7); padding:1rem; border-radius:var(--radius-sm); border:1px solid var(--border-glass);">
+            <div style="font-family:var(--font-code); font-size:0.8rem; color:var(--text-sub); display:flex; justify-content:space-between; margin-bottom:0.4rem;">
+              <span>Automated Test Pass Rate</span>
+              <span style="color:var(--primary-emerald); font-weight:600;">98.4% Passed</span>
+            </div>
+            <div style="height:6px; background:rgba(255,255,255,0.08); border-radius:10px; overflow:hidden;">
+              <div style="width:98.4%; height:100%; background:linear-gradient(90deg, var(--primary-emerald), var(--accent-cyan));"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive QA Playground Section -->
+  <section id="playground" class="section-padding playground-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">
+          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m18 16 4-4-4-4"/><path d="m6 8-4 4 4 4"/><path d="m14.5 4-5 16"/></svg>
+          INTERACTIVE DEMO
+        </span>
+        <h2 class="section-title">Interactive QA & Automation Playground</h2>
+        <p class="section-desc">Test real-time simulations of the QA automation tools and audit workflows built by Shreyas Peherkar.</p>
+      </div>
+
+      <div class="glass-card playground-container">
+        <div class="playground-tabs">
+          <button class="tab-btn active" data-tab="seo-tab" id="seoTabBtn">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+            Automated SEO Audit Tool
+          </button>
+          <button class="tab-btn" data-tab="bug-tab" id="bugTabBtn">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="8" height="14" x="8" y="6" rx="4"/><path d="m19 7-3 2"/><path d="m5 7 3 2"/><path d="m19 19-3-2"/><path d="m5 19 3-2"/><path d="M20 13h-4"/><path d="M4 13h4"/><path d="m10 4 1-2"/><path d="m14 4-1-2"/></svg>
+            Auto Bug Logger (OpenProject + n8n)
+          </button>
+        </div>
+
+        <!-- SEO Audit Simulator Panel -->
+        <div class="playground-panel active" id="seo-tab">
+          <div class="panel-input-box">
+            <h3 style="font-size:1.15rem; margin-bottom:1rem; color:var(--text-main);">SEO & Web Structure Auditor</h3>
+            <p style="font-size:0.9rem; color:var(--text-sub); margin-bottom:1.5rem;">
+              Simulates the Chrome Extension SEO audit tool built by Shreyas. It scans meta tags, schema structure, broken links, and dispatches n8n webhook notifications.
+            </p>
+
+            <div class="form-group">
+              <label class="form-label" for="seoUrlInput">Target Website URL to Audit:</label>
+              <input type="url" id="seoUrlInput" class="form-input" value="https://indiamart.com/product-catalog" placeholder="Enter website URL">
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">Audit Modules to Execute:</label>
+              <div style="display:grid; grid-template-columns:1fr 1fr; gap:0.5rem; margin-top:0.5rem;">
+                <label style="font-size:0.85rem; color:var(--text-sub); display:flex; align-items:center; gap:0.4rem;">
+                  <input type="checkbox" checked disabled> Meta Tags & OpenGraph
+                </label>
+                <label style="font-size:0.85rem; color:var(--text-sub); display:flex; align-items:center; gap:0.4rem;">
+                  <input type="checkbox" checked disabled> Schema.org Validation
+                </label>
+                <label style="font-size:0.85rem; color:var(--text-sub); display:flex; align-items:center; gap:0.4rem;">
+                  <input type="checkbox" checked disabled> Broken Link Detector
+                </label>
+                <label style="font-size:0.85rem; color:var(--text-sub); display:flex; align-items:center; gap:0.4rem;">
+                  <input type="checkbox" checked disabled> n8n Alert Webhook
+                </label>
+              </div>
+            </div>
+
+            <button class="btn btn-primary" id="runSeoAuditBtn" style="width:100%; margin-top:1rem;">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+              Run Automated Audit
+            </button>
+          </div>
+
+          <div class="panel-output-box">
+            <div class="code-header">
+              <span>AUTOMATED_AUDIT_OUTPUT.json</span>
+              <span id="seoAuditStatus" style="color:var(--primary-emerald);">READY</span>
+            </div>
+            <pre class="code-preview" id="seoConsoleOutput">// Ready to execute audit simulation...
+// Click "Run Automated Audit" to test response validation.</pre>
+
+            <div class="audit-steps" id="seoAuditSteps">
+              <div class="audit-step">
+                <span>1. Initialize Chrome Extension Content Script</span>
+              </div>
+              <div class="audit-step">
+                <span>2. Parse DOM Meta Tags & Canonical Links</span>
+              </div>
+              <div class="audit-step">
+                <span>3. Validate JSON-LD Structured Data Schema</span>
+              </div>
+              <div class="audit-step">
+                <span>4. Trigger n8n Automation Webhook & Notify Team</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Auto Bug Logger Panel -->
+        <div class="playground-panel" id="bug-tab">
+          <div class="panel-input-box">
+            <h3 style="font-size:1.15rem; margin-bottom:1rem; color:var(--text-main);">UI Bug Logger to OpenProject</h3>
+            <p style="font-size:0.9rem; color:var(--text-sub); margin-bottom:1.5rem;">
+              Direct bug logging tool that packages UI anomalies directly into OpenProject tickets via n8n automation pipelines.
+            </p>
+
+            <div class="form-group">
+              <label class="form-label" for="bugTitleInput">Defect Summary / Title:</label>
+              <input type="text" id="bugTitleInput" class="form-input" value="WebAPI response mismatch on checkout payload verification" placeholder="Enter bug title">
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="bugSeverity">Severity & Priority Level:</label>
+              <select id="bugSeverity" class="form-select">
+                <option value="High">High - Regression Blocking</option>
+                <option value="Critical">Critical - Production Impact</option>
+                <option value="Medium">Medium - UI Validation Error</option>
+                <option value="Low">Low - Cosmetic Issue</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="bugDesc">Steps to Reproduce / Details:</label>
+              <textarea id="bugDesc" class="form-textarea" rows="3">1. Execute Postman API call for checkout endpoint
+2. Verify SQL table entries in backend DB
+3. Expected HTTP 200 with matching schema ID.</textarea>
+            </div>
+
+            <button class="btn btn-primary" id="logBugBtn" style="width:100%; margin-top:0.5rem;">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+              Submit Bug to OpenProject
+            </button>
+          </div>
+
+          <div class="panel-output-box">
+            <div class="code-header">
+              <span>OPENPROJECT_API_PAYLOAD.json</span>
+              <span id="bugLoggerStatus" style="color:var(--text-sub);">IDLE</span>
+            </div>
+            <pre class="code-preview" id="bugConsoleOutput">{
+  "tool": "Auto Bug Logger",
+  "integrated_with": ["OpenProject", "n8n_workflows"],
+  "status": "Awaiting form submission..."
+}</pre>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Work Experience Section -->
+  <section id="experience" class="section-padding">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">
+          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="14" x="2" y="7" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+          CAREER PATH
+        </span>
+        <h2 class="section-title">Work Experience</h2>
+        <p class="section-desc">Hands-on experience in Quality Assurance, Automation Engineering, WebAPI testing, and CI/CD release management.</p>
+      </div>
+
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="glass-card timeline-card">
+            <div class="timeline-header">
+              <div>
+                <h3 class="role-title">Executive QA Engineer</h3>
+                <div class="company-name">IndiaMART InterMESH Ltd</div>
+              </div>
+              <span class="timeline-date">Mar 2025 – Present</span>
+            </div>
+
+            <ul class="timeline-bullets">
+              <li>Executed comprehensive manual test cases for web and mobile applications ensuring end-to-end product stability and seamless user experience across Desktop, Mobile Web, and Android platforms.</li>
+              <li>Performed Functional, UI, Regression, Smoke, Sanity, and Cross-browser testing across multiple browser environments and operating platforms.</li>
+              <li>Conducted WebAPI testing using Postman including request/response validation, HTTP payload checks, and backend database verification using complex SQL queries.</li>
+              <li>Validated SEO elements including structured JSON-LD data, meta tags, search indexing, schema compliance, and page structure for optimal search engine performance.</li>
+              <li>Designed, maintained, and executed modular test case suites and regression suites for multiple key product releases.</li>
+              <li>Logged, tracked, prioritized, and retested defects using OpenProject while collaborating directly with software developers for swift issue resolution.</li>
+              <li>Operated in an Agile development lifecycle with active exposure to CI/CD pipelines, release validation, and sprint planning sessions.</li>
+              <li>Contributed to Cypress UI automation using JavaScript to minimize manual testing overhead and expand automated regression suite coverage.</li>
+              <li>Automated QA workflows, team notifications, and bug logging pipelines utilizing n8n workflow automation.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Projects Section -->
+  <section id="projects" class="section-padding" style="background:rgba(255,255,255,0.01);">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">
+          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
+          INNOVATION & TOOLS
+        </span>
+        <h2 class="section-title">Featured QA Projects</h2>
+        <p class="section-desc">Custom tools, extension scripts, and automation suites built to streamline testing and defect management.</p>
+      </div>
+
+      <div class="projects-grid">
+        <!-- Project 1 -->
+        <div class="glass-card project-card">
+          <div class="project-tag-bar">
+            <span class="tech-tag">JavaScript</span>
+            <span class="tech-tag">Chrome Extension API</span>
+            <span class="tech-tag">n8n</span>
+          </div>
+          <h3 class="project-title">SEO Chrome Extension – Automated Website Audit Tool</h3>
+          <p class="project-desc">
+            A Chrome Extension created to automate complex SEO site audits directly within the browser view. Automatically parses DOM metadata, structure, and canonical tags.
+          </p>
+          <ul class="project-features">
+            <li>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+              Automates meta tags, schema structure, and performance checks.
+            </li>
+            <li>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+              Implements automated broken link detection and reporting.
+            </li>
+            <li>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+              Integrates n8n webhooks for instant team notifications.
+            </li>
+          </ul>
+          <button class="btn btn-outline launch-demo-btn" data-target="seo-tab" style="width:100%; margin-top:auto;">
+            Try In Playground
+          </button>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="glass-card project-card">
+          <div class="project-tag-bar">
+            <span class="tech-tag">JavaScript</span>
+            <span class="tech-tag">n8n Automation</span>
+            <span class="tech-tag">OpenProject</span>
+          </div>
+          <h3 class="project-title">Auto Bug Logger – QA Automation Suite</h3>
+          <p class="project-desc">
+            An automated defect reporting system designed to log UI anomalies directly into OpenProject tracker without manual ticket creation.
+          </p>
+          <ul class="project-features">
+            <li>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+              Direct UI bug capture & JSON packaging into OpenProject.
+            </li>
+            <li>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+              Automated defect status tracking & notification dispatch via n8n.
+            </li>
+            <li>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+              Drastically reduced manual effort in QA bug logging.
+            </li>
+          </ul>
+          <button class="btn btn-outline launch-demo-btn" data-target="bug-tab" style="width:100%; margin-top:auto;">
+            Try In Playground
+          </button>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="glass-card project-card">
+          <div class="project-tag-bar">
+            <span class="tech-tag">Postman</span>
+            <span class="tech-tag">SQL</span>
+            <span class="tech-tag">REST API</span>
+          </div>
+          <h3 class="project-title">API Testing and Data Integrity Suite</h3>
+          <p class="project-desc">
+            Comprehensive WebAPI testing and data validation suite designed to verify backend REST API microservices against PostgreSQL/SQL databases.
+          </p>
+          <ul class="project-features">
+            <li>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+              Postman collection automation for request/response validation.
+            </li>
+            <li>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+              Direct SQL database query validation for backend payload integrity.
+            </li>
+            <li>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+              Executed API regression suites ensuring server deployment stability.
+            </li>
+          </ul>
+          <a href="#contact" class="btn btn-outline" style="width:100%; margin-top:auto; text-align:center;">
+            Inquire Details
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Technical Skills Matrix Section -->
+  <section id="skills" class="section-padding">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">
+          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+          TECHNICAL PROFICIENCY
+        </span>
+        <h2 class="section-title">Skills & Capabilities</h2>
+        <p class="section-desc">Technical competencies, testing methodologies, automation tools, and databases.</p>
+      </div>
+
+      <!-- Skills Filter Buttons -->
+      <div class="skills-filter">
+        <button class="filter-btn active" data-filter="all">All Skills</button>
+        <button class="filter-btn" data-filter="automation">Automation & Workflows</button>
+        <button class="filter-btn" data-filter="testing">Testing Methodologies</button>
+        <button class="filter-btn" data-filter="languages">Languages & Web</button>
+        <button class="filter-btn" data-filter="tools">Tools & Databases</button>
+      </div>
+
+      <!-- Skills Grid -->
+      <div class="skills-grid" id="skillsGrid">
+        <!-- Automation -->
+        <div class="glass-card skill-card" data-category="automation">
+          <div class="skill-header">
+            <span class="skill-name">Cypress Automation</span>
+            <span class="skill-badge">Advanced</span>
+          </div>
+          <div class="skill-progress-bar">
+            <div class="skill-progress-fill" data-progress="90%"></div>
+          </div>
+          <p style="font-size:0.85rem; color:var(--text-sub);">JavaScript-based UI automation scripts & regression suites.</p>
+        </div>
+
+        <div class="glass-card skill-card" data-category="automation">
+          <div class="skill-header">
+            <span class="skill-name">n8n Workflow Automation</span>
+            <span class="skill-badge">Expert</span>
+          </div>
+          <div class="skill-progress-bar">
+            <div class="skill-progress-fill" data-progress="95%"></div>
+          </div>
+          <p style="font-size:0.85rem; color:var(--text-sub);">Bug logging automation, webhooks & process pipelines.</p>
+        </div>
+
+        <!-- Testing -->
+        <div class="glass-card skill-card" data-category="testing">
+          <div class="skill-header">
+            <span class="skill-name">WebAPI & Postman Testing</span>
+            <span class="skill-badge">Expert</span>
+          </div>
+          <div class="skill-progress-bar">
+            <div class="skill-progress-fill" data-progress="95%"></div>
+          </div>
+          <p style="font-size:0.85rem; color:var(--text-sub);">REST API verification, collection runs & schema checks.</p>
+        </div>
+
+        <div class="glass-card skill-card" data-category="testing">
+          <div class="skill-header">
+            <span class="skill-name">Functional & Regression QA</span>
+            <span class="skill-badge">Expert</span>
+          </div>
+          <div class="skill-progress-bar">
+            <div class="skill-progress-fill" data-progress="95%"></div>
+          </div>
+          <p style="font-size:0.85rem; color:var(--text-sub);">Smoke, sanity, UI, cross-browser & mobile testing.</p>
+        </div>
+
+        <div class="glass-card skill-card" data-category="testing">
+          <div class="skill-header">
+            <span class="skill-name">SEO & Structured Data Audit</span>
+            <span class="skill-badge">Advanced</span>
+          </div>
+          <div class="skill-progress-bar">
+            <div class="skill-progress-fill" data-progress="90%"></div>
+          </div>
+          <p style="font-size:0.85rem; color:var(--text-sub);">JSON-LD schema, meta tags, indexing & DOM audits.</p>
+        </div>
+
+        <!-- Languages -->
+        <div class="glass-card skill-card" data-category="languages">
+          <div class="skill-header">
+            <span class="skill-name">JavaScript</span>
+            <span class="skill-badge">Proficient</span>
+          </div>
+          <div class="skill-progress-bar">
+            <div class="skill-progress-fill" data-progress="88%"></div>
+          </div>
+          <p style="font-size:0.85rem; color:var(--text-sub);">Core JS script writing for Cypress & Chrome Extensions.</p>
+        </div>
+
+        <div class="glass-card skill-card" data-category="languages">
+          <div class="skill-header">
+            <span class="skill-name">HTML5 & CSS3</span>
+            <span class="skill-badge">Proficient</span>
+          </div>
+          <div class="skill-progress-bar">
+            <div class="skill-progress-fill" data-progress="85%"></div>
+          </div>
+          <p style="font-size:0.85rem; color:var(--text-sub);">UI validation, selector matching & layout checks.</p>
+        </div>
+
+        <div class="glass-card skill-card" data-category="languages">
+          <div class="skill-header">
+            <span class="skill-name">Java & Python (Basic)</span>
+            <span class="skill-badge">Intermediate</span>
+          </div>
+          <div class="skill-progress-bar">
+            <div class="skill-progress-fill" data-progress="70%"></div>
+          </div>
+          <p style="font-size:0.85rem; color:var(--text-sub);">Scripting fundamentals & OOP concepts.</p>
+        </div>
+
+        <!-- Tools & Databases -->
+        <div class="glass-card skill-card" data-category="tools">
+          <div class="skill-header">
+            <span class="skill-name">SQL Database Queries</span>
+            <span class="skill-badge">Advanced</span>
+          </div>
+          <div class="skill-progress-bar">
+            <div class="skill-progress-fill" data-progress="90%"></div>
+          </div>
+          <p style="font-size:0.85rem; color:var(--text-sub);">Backend data validation, JOIN queries & entry checks.</p>
+        </div>
+
+        <div class="glass-card skill-card" data-category="tools">
+          <div class="skill-header">
+            <span class="skill-name">OpenProject & Jira</span>
+            <span class="skill-badge">Expert</span>
+          </div>
+          <div class="skill-progress-bar">
+            <div class="skill-progress-fill" data-progress="95%"></div>
+          </div>
+          <p style="font-size:0.85rem; color:var(--text-sub);">Defect tracking, lifecycle prioritization & reporting.</p>
+        </div>
+
+        <div class="glass-card skill-card" data-category="tools">
+          <div class="skill-header">
+            <span class="skill-name">Git & CI/CD Pipelines</span>
+            <span class="skill-badge">Proficient</span>
+          </div>
+          <div class="skill-progress-bar">
+            <div class="skill-progress-fill" data-progress="85%"></div>
+          </div>
+          <p style="font-size:0.85rem; color:var(--text-sub);">Version control, release validation & build checks.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Education & Certifications Section -->
+  <section id="education" class="section-padding" style="background:rgba(255,255,255,0.01);">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">
+          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+          ACADEMICS & CERTIFICATIONS
+        </span>
+        <h2 class="section-title">Education & Credentials</h2>
+        <p class="section-desc">Academic background in Computer Engineering and IT Management.</p>
+      </div>
+
+      <div class="edu-cert-grid">
+        <!-- Education Column -->
+        <div>
+          <h3 style="font-size:1.5rem; margin-bottom:1.5rem; display:flex; align-items:center; gap:0.5rem;">
+            Academic Degrees
+          </h3>
+
+          <div class="glass-card edu-card">
+            <span class="edu-year">2025 – Present</span>
+            <h4 class="edu-title">MBA – IT Management</h4>
+            <div class="edu-inst">Amity University</div>
+          </div>
+
+          <div class="glass-card edu-card">
+            <span class="edu-year">2021 – 2024</span>
+            <h4 class="edu-title">Bachelor of Engineering – Computer Engineering</h4>
+            <div class="edu-inst">University Engineering Graduate</div>
+          </div>
+
+          <div class="glass-card edu-card">
+            <span class="edu-year">2018 – 2021</span>
+            <h4 class="edu-title">Diploma – Information Technology</h4>
+            <div class="edu-inst">State Board Technical Education</div>
+          </div>
+        </div>
+
+        <!-- Certifications Column -->
+        <div>
+          <h3 style="font-size:1.5rem; margin-bottom:1.5rem; display:flex; align-items:center; gap:0.5rem;">
+            Verified Certifications
+          </h3>
+
+          <div class="glass-card cert-card">
+            <div class="cert-badge">
+              <div class="cert-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 15 2 2 4-4"/><rect width="18" height="18" x="3" y="3" rx="2"/></svg>
+              </div>
+              <div>
+                <h4 style="font-size:1.1rem;">Postman API Fundamentals Student Expert</h4>
+                <p style="font-size:0.88rem; color:var(--text-sub);">Issued by Postman • API Testing & Automation Credentials</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="glass-card cert-card">
+            <div class="cert-badge">
+              <div class="cert-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/><path d="M3 12c0 1.66 4 3 9 3s9-1.34 9-3"/></svg>
+              </div>
+              <div>
+                <h4 style="font-size:1.1rem;">SQL (Intermediate) Certificate</h4>
+                <p style="font-size:0.88rem; color:var(--text-sub);">Verified by HackerRank • Complex Data Querying & JOINs</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="section-padding">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">
+          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          LET'S CONNECT
+        </span>
+        <h2 class="section-title">Get In Touch</h2>
+        <p class="section-desc">Open for Quality Assurance, Automation Engineering, and Testing leadership opportunities.</p>
+      </div>
+
+      <div class="contact-grid">
+        <div class="glass-card" style="padding:2.5rem;">
+          <h3 style="font-size:1.5rem; margin-bottom:1rem;">Contact Information</h3>
+          <p style="color:var(--text-sub); margin-bottom:2rem;">
+            Feel free to reach out via email, phone, or LinkedIn to discuss QA roles, automation projects, or tech collaborations.
+          </p>
+
+          <div class="contact-info-list">
+            <div class="contact-item">
+              <div class="contact-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+              </div>
+              <div>
+                <div style="font-size:0.85rem; color:var(--text-muted);">Email Address</div>
+                <a href="mailto:shreyaspeherkar04@gmail.com" style="font-weight:600; color:var(--text-main);">shreyaspeherkar04@gmail.com</a>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="contact-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              </div>
+              <div>
+                <div style="font-size:0.85rem; color:var(--text-muted);">Phone Number</div>
+                <a href="tel:+917841820609" style="font-weight:600; color:var(--text-main);">+91-7841820609</a>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="contact-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
+              </div>
+              <div>
+                <div style="font-size:0.85rem; color:var(--text-muted);">Professional Profiles</div>
+                <div style="display:flex; gap:1rem; margin-top:0.2rem;">
+                  <a href="https://linkedin.com" target="_blank" style="color:var(--primary-emerald); font-weight:600;">LinkedIn</a>
+                  <a href="https://github.com" target="_blank" style="color:var(--accent-cyan); font-weight:600;">GitHub Profile</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Interactive Contact Form -->
+        <div class="glass-card" style="padding:2.5rem;">
+          <form id="contactForm">
+            <h3 style="font-size:1.5rem; margin-bottom:1.5rem;">Send a Message</h3>
+
+            <div class="form-group">
+              <label class="form-label" for="contactName">Your Name:</label>
+              <input type="text" id="contactName" class="form-input" placeholder="e.g. Rahul Sharma" required>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="contactEmail">Your Email:</label>
+              <input type="email" id="contactEmail" class="form-input" placeholder="e.g. rahul@company.com" required>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="contactMessage">Message:</label>
+              <textarea id="contactMessage" class="form-textarea" rows="4" placeholder="Hello Shreyas, we'd like to discuss a QA Automation opportunity..." required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary" style="width:100%;">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+              Send Message
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>© 2026 Shreyas Bhaginath Peherkar. Designed with precision for Quality Assurance Excellence.</p>
+    </div>
+  </footer>
+
+  <!-- Interactive Resume Modal Drawer -->
+  <div class="modal-overlay" id="resumeModal">
+    <div class="modal-container">
+      <button class="modal-close" id="closeResumeBtn" aria-label="Close Resume Modal">&times;</button>
+      
+      <div style="display:flex; justify-content:space-between; align-items:center; border-bottom:1px solid var(--border-glass); padding-bottom:1rem; margin-bottom:1.5rem;">
+        <h3 style="font-size:1.5rem;">Curriculum Vitae</h3>
+        <button class="btn btn-primary" id="printResumeBtn" style="padding:0.5rem 1rem; font-size:0.85rem;">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          Print / Save PDF
+        </button>
+      </div>
+
+      <div id="printableResumeArea" style="line-height:1.7;">
+        <div style="text-align:center; margin-bottom:2rem; border-bottom:2px solid var(--primary-emerald); padding-bottom:1rem;">
+          <h2 style="font-size:2rem; color:var(--text-main);">Shreyas Bhaginath Peherkar</h2>
+          <p style="color:var(--primary-emerald); font-weight:600;">Executive QA Engineer | Cypress Automation Specialist</p>
+          <p style="font-size:0.9rem; color:var(--text-sub);">
+            +91-7841820609 | shreyaspeherkar04@gmail.com | LinkedIn | GitHub
+          </p>
+        </div>
+
+        <div style="margin-bottom:1.5rem;">
+          <h4 style="color:var(--accent-cyan); border-bottom:1px solid var(--border-glass); padding-bottom:0.2rem; margin-bottom:0.5rem;">SUMMARY</h4>
+          <p style="font-size:0.92rem; color:var(--text-sub);">
+            Quality Assurance Engineer at IndiaMART InterMESH Ltd with experience in manual testing, WebAPI testing, regression testing, UI validation, database testing, and SEO validation across web and mobile platforms. Skilled in Cypress automation (JavaScript), Postman API testing, SQL validation, and n8n workflow automation with exposure to Agile methodologies and CI/CD pipelines. Strong understanding of SDLC, STLC, defect lifecycle, and cross-platform testing with focus on product quality, automation efficiency, and defect prevention.
+          </p>
+        </div>
+
+        <div style="margin-bottom:1.5rem;">
+          <h4 style="color:var(--accent-cyan); border-bottom:1px solid var(--border-glass); padding-bottom:0.2rem; margin-bottom:0.5rem;">EXPERIENCE</h4>
+          <div style="display:flex; justify-content:space-between; margin-bottom:0.3rem;">
+            <strong>Executive QA – IndiaMART InterMESH Ltd</strong>
+            <span>Mar 2025 – Present</span>
+          </div>
+          <ul style="padding-left:1.2rem; font-size:0.9rem; color:var(--text-sub);">
+            <li>Executed manual test cases for web and mobile applications ensuring functionality and quality.</li>
+            <li>Performed functional, UI, regression, smoke, sanity, and cross-browser testing across Desktop, Mobile Web, and Android.</li>
+            <li>Conducted WebAPI testing using Postman including request/response validation & backend SQL verification.</li>
+            <li>Validated SEO elements including structured data, meta tags, schema validation, and page structure.</li>
+            <li>Logged, tracked, prioritized, and retested defects using OpenProject while collaborating with developers.</li>
+            <li>Contributed to Cypress automation using JavaScript to reduce manual testing effort and improve regression coverage.</li>
+            <li>Automated QA workflows, notifications, and bug logging processes using n8n.</li>
+          </ul>
+        </div>
+
+        <div style="margin-bottom:1.5rem;">
+          <h4 style="color:var(--accent-cyan); border-bottom:1px solid var(--border-glass); padding-bottom:0.2rem; margin-bottom:0.5rem;">KEY PROJECTS</h4>
+          <p style="font-size:0.92rem; margin-bottom:0.3rem;"><strong>SEO Chrome Extension – Automated Website Audit Tool</strong> (JavaScript, Chrome Extension API, n8n)</p>
+          <p style="font-size:0.92rem; margin-bottom:0.3rem;"><strong>Auto Bug Logger – QA Automation Tool</strong> (JavaScript, n8n, OpenProject)</p>
+          <p style="font-size:0.92rem;"><strong>API Testing and Validation Project</strong> (Postman, SQL, REST API)</p>
+        </div>
+
+        <div>
+          <h4 style="color:var(--accent-cyan); border-bottom:1px solid var(--border-glass); padding-bottom:0.2rem; margin-bottom:0.5rem;">EDUCATION & CERTIFICATIONS</h4>
+          <p style="font-size:0.9rem; color:var(--text-sub);">• MBA – IT Management, Amity University (2025 – Present)</p>
+          <p style="font-size:0.9rem; color:var(--text-sub);">• Bachelor of Engineering – Computer Engineering (2021 – 2024)</p>
+          <p style="font-size:0.9rem; color:var(--text-sub);">• SQL (Intermediate) – HackerRank | Postman API Fundamentals Student Expert</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Container -->
+  <div class="toast-container" id="toastContainer"></div>
+
+  <!-- JavaScript -->
+  <script src="app.js"></script>
+</body>
+</html>
