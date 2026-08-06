@@ -33,9 +33,8 @@
 
       <nav aria-label="Main Navigation">
         <ul class="nav-links">
-          <li><a href="#playground" class="nav-link">QA Playground</a></li>
-          <li><a href="#experience" class="nav-link">Experience</a></li>
           <li><a href="#projects" class="nav-link">Projects</a></li>
+          <li><a href="#experience" class="nav-link">Experience</a></li>
           <li><a href="#skills" class="nav-link">Skills</a></li>
           <li><a href="#education" class="nav-link">Education</a></li>
           <li><a href="#contact" class="nav-link">Contact</a></li>
@@ -84,12 +83,9 @@
         </div>
 
         <div class="hero-cta">
-          <a href="#playground" class="btn btn-primary">
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"/></svg>
-            Try Live QA Playground
-          </a>
-          <a href="#projects" class="btn btn-outline">
-            View Projects
+          <a href="#projects" class="btn btn-primary">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
+            Explore Projects
           </a>
           <a href="mailto:shreyaspeherkar04@gmail.com" class="btn btn-outline">
             Contact Me
@@ -141,143 +137,7 @@
     </div>
   </section>
 
-  <!-- Interactive QA Playground Section -->
-  <section id="playground" class="section-padding playground-section">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-tag">
-          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m18 16 4-4-4-4"/><path d="m6 8-4 4 4 4"/><path d="m14.5 4-5 16"/></svg>
-          INTERACTIVE DEMO
-        </span>
-        <h2 class="section-title">Interactive QA & Automation Playground</h2>
-        <p class="section-desc">Test real-time simulations of the QA automation tools and audit workflows built by Shreyas Peherkar.</p>
-      </div>
 
-      <div class="glass-card playground-container">
-        <div class="playground-tabs">
-          <button class="tab-btn active" data-tab="seo-tab" id="seoTabBtn">
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
-            Automated SEO Audit Tool
-          </button>
-          <button class="tab-btn" data-tab="bug-tab" id="bugTabBtn">
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="8" height="14" x="8" y="6" rx="4"/><path d="m19 7-3 2"/><path d="m5 7 3 2"/><path d="m19 19-3-2"/><path d="m5 19 3-2"/><path d="M20 13h-4"/><path d="M4 13h4"/><path d="m10 4 1-2"/><path d="m14 4-1-2"/></svg>
-            Auto Bug Logger (OpenProject + n8n)
-          </button>
-        </div>
-
-        <!-- SEO Audit Simulator Panel -->
-        <div class="playground-panel active" id="seo-tab">
-          <div class="panel-input-box">
-            <h3 style="font-size:1.15rem; margin-bottom:1rem; color:var(--text-main);">SEO & Web Structure Auditor</h3>
-            <p style="font-size:0.9rem; color:var(--text-sub); margin-bottom:1.5rem;">
-              Simulates the Chrome Extension SEO audit tool built by Shreyas. It scans meta tags, schema structure, broken links, and dispatches n8n webhook notifications.
-            </p>
-
-            <div class="form-group">
-              <label class="form-label" for="seoUrlInput">Target Website URL to Audit:</label>
-              <input type="url" id="seoUrlInput" class="form-input" value="https://indiamart.com/product-catalog" placeholder="Enter website URL">
-            </div>
-
-            <div class="form-group">
-              <label class="form-label">Audit Modules to Execute:</label>
-              <div style="display:grid; grid-template-columns:1fr 1fr; gap:0.5rem; margin-top:0.5rem;">
-                <label style="font-size:0.85rem; color:var(--text-sub); display:flex; align-items:center; gap:0.4rem;">
-                  <input type="checkbox" checked disabled> Meta Tags & OpenGraph
-                </label>
-                <label style="font-size:0.85rem; color:var(--text-sub); display:flex; align-items:center; gap:0.4rem;">
-                  <input type="checkbox" checked disabled> Schema.org Validation
-                </label>
-                <label style="font-size:0.85rem; color:var(--text-sub); display:flex; align-items:center; gap:0.4rem;">
-                  <input type="checkbox" checked disabled> Broken Link Detector
-                </label>
-                <label style="font-size:0.85rem; color:var(--text-sub); display:flex; align-items:center; gap:0.4rem;">
-                  <input type="checkbox" checked disabled> n8n Alert Webhook
-                </label>
-              </div>
-            </div>
-
-            <button class="btn btn-primary" id="runSeoAuditBtn" style="width:100%; margin-top:1rem;">
-              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-              Run Automated Audit
-            </button>
-          </div>
-
-          <div class="panel-output-box">
-            <div class="code-header">
-              <span>AUTOMATED_AUDIT_OUTPUT.json</span>
-              <span id="seoAuditStatus" style="color:var(--primary-emerald);">READY</span>
-            </div>
-            <pre class="code-preview" id="seoConsoleOutput">// Ready to execute audit simulation...
-// Click "Run Automated Audit" to test response validation.</pre>
-
-            <div class="audit-steps" id="seoAuditSteps">
-              <div class="audit-step">
-                <span>1. Initialize Chrome Extension Content Script</span>
-              </div>
-              <div class="audit-step">
-                <span>2. Parse DOM Meta Tags & Canonical Links</span>
-              </div>
-              <div class="audit-step">
-                <span>3. Validate JSON-LD Structured Data Schema</span>
-              </div>
-              <div class="audit-step">
-                <span>4. Trigger n8n Automation Webhook & Notify Team</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Auto Bug Logger Panel -->
-        <div class="playground-panel" id="bug-tab">
-          <div class="panel-input-box">
-            <h3 style="font-size:1.15rem; margin-bottom:1rem; color:var(--text-main);">UI Bug Logger to OpenProject</h3>
-            <p style="font-size:0.9rem; color:var(--text-sub); margin-bottom:1.5rem;">
-              Direct bug logging tool that packages UI anomalies directly into OpenProject tickets via n8n automation pipelines.
-            </p>
-
-            <div class="form-group">
-              <label class="form-label" for="bugTitleInput">Defect Summary / Title:</label>
-              <input type="text" id="bugTitleInput" class="form-input" value="WebAPI response mismatch on checkout payload verification" placeholder="Enter bug title">
-            </div>
-
-            <div class="form-group">
-              <label class="form-label" for="bugSeverity">Severity & Priority Level:</label>
-              <select id="bugSeverity" class="form-select">
-                <option value="High">High - Regression Blocking</option>
-                <option value="Critical">Critical - Production Impact</option>
-                <option value="Medium">Medium - UI Validation Error</option>
-                <option value="Low">Low - Cosmetic Issue</option>
-              </select>
-            </div>
-
-            <div class="form-group">
-              <label class="form-label" for="bugDesc">Steps to Reproduce / Details:</label>
-              <textarea id="bugDesc" class="form-textarea" rows="3">1. Execute Postman API call for checkout endpoint
-2. Verify SQL table entries in backend DB
-3. Expected HTTP 200 with matching schema ID.</textarea>
-            </div>
-
-            <button class="btn btn-primary" id="logBugBtn" style="width:100%; margin-top:0.5rem;">
-              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
-              Submit Bug to OpenProject
-            </button>
-          </div>
-
-          <div class="panel-output-box">
-            <div class="code-header">
-              <span>OPENPROJECT_API_PAYLOAD.json</span>
-              <span id="bugLoggerStatus" style="color:var(--text-sub);">IDLE</span>
-            </div>
-            <pre class="code-preview" id="bugConsoleOutput">{
-  "tool": "Auto Bug Logger",
-  "integrated_with": ["OpenProject", "n8n_workflows"],
-  "status": "Awaiting form submission..."
-}</pre>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
 
   <!-- Work Experience Section -->
   <section id="experience" class="section-padding">
@@ -333,42 +193,13 @@
       </div>
 
       <div class="projects-grid">
-        <!-- Project 1 -->
-        <div class="glass-card project-card">
-          <div class="project-tag-bar">
-            <span class="tech-tag">JavaScript</span>
-            <span class="tech-tag">Chrome Extension API</span>
-            <span class="tech-tag">n8n</span>
-          </div>
-          <h3 class="project-title">SEO Chrome Extension – Automated Website Audit Tool</h3>
-          <p class="project-desc">
-            A Chrome Extension created to automate complex SEO site audits directly within the browser view. Automatically parses DOM metadata, structure, and canonical tags.
-          </p>
-          <ul class="project-features">
-            <li>
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
-              Automates meta tags, schema structure, and performance checks.
-            </li>
-            <li>
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
-              Implements automated broken link detection and reporting.
-            </li>
-            <li>
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
-              Integrates n8n webhooks for instant team notifications.
-            </li>
-          </ul>
-          <button class="btn btn-outline launch-demo-btn" data-target="seo-tab" style="width:100%; margin-top:auto;">
-            Try In Playground
-          </button>
-        </div>
-
-        <!-- Project 2 -->
+        <!-- Project 1: Auto Bug Logger -->
         <div class="glass-card project-card">
           <div class="project-tag-bar">
             <span class="tech-tag">JavaScript</span>
             <span class="tech-tag">n8n Automation</span>
             <span class="tech-tag">OpenProject</span>
+            <span class="tech-tag">Vercel</span>
           </div>
           <h3 class="project-title">Auto Bug Logger – QA Automation Suite</h3>
           <p class="project-desc">
@@ -388,12 +219,73 @@
               Drastically reduced manual effort in QA bug logging.
             </li>
           </ul>
-          <button class="btn btn-outline launch-demo-btn" data-target="bug-tab" style="width:100%; margin-top:auto;">
-            Try In Playground
+          <a href="https://qa-bug-logger.vercel.app/" target="_blank" class="btn btn-primary" style="width:100%; margin-top:auto;">
+            View Live Project ↗
+          </a>
+        </div>
+
+        <!-- Project 2: MOM Dashboard -->
+        <div class="glass-card project-card">
+          <div class="project-tag-bar">
+            <span class="tech-tag">JavaScript</span>
+            <span class="tech-tag">MOM System</span>
+            <span class="tech-tag">QA Workflow</span>
+            <span class="tech-tag">Vercel</span>
+          </div>
+          <h3 class="project-title">MOM Dashboard – Minutes of Meeting Tool</h3>
+          <p class="project-desc">
+            Interactive Minutes of Meeting (MOM) management dashboard built to track team decisions, action items, sprint reviews, and QA release coordination.
+          </p>
+          <ul class="project-features">
+            <li>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+              Structured meeting minutes logging & action item tracking.
+            </li>
+            <li>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+              Seamless collaboration workspace for release validation syncs.
+            </li>
+            <li>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+              Live deployment optimized for web performance.
+            </li>
+          </ul>
+          <a href="https://mom-dashboard-theta.vercel.app/" target="_blank" class="btn btn-primary" style="width:100%; margin-top:auto;">
+            View Live Project ↗
+          </a>
+        </div>
+
+        <!-- Project 3: SEO Chrome Extension -->
+        <div class="glass-card project-card">
+          <div class="project-tag-bar">
+            <span class="tech-tag">JavaScript</span>
+            <span class="tech-tag">Chrome Extension API</span>
+            <span class="tech-tag">n8n</span>
+          </div>
+          <h3 class="project-title">SEO Chrome Extension – Website Audit Tool</h3>
+          <p class="project-desc">
+            A Chrome Extension created to automate complex SEO site audits directly within the browser view. Automatically parses DOM metadata, structure, and canonical tags.
+          </p>
+          <ul class="project-features">
+            <li>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+              Automates meta tags, schema structure, and performance checks.
+            </li>
+            <li>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+              Implements automated broken link detection and reporting.
+            </li>
+            <li>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+              Integrates n8n webhooks for instant team notifications.
+            </li>
+          </ul>
+          <button class="btn btn-outline" style="width:100%; margin-top:auto; opacity:0.85;" disabled>
+            Live Demo URL Coming Soon
           </button>
         </div>
 
-        <!-- Project 3 -->
+        <!-- Project 4: API Testing Suite -->
         <div class="glass-card project-card">
           <div class="project-tag-bar">
             <span class="tech-tag">Postman</span>
