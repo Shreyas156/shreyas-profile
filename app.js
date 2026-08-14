@@ -3,6 +3,7 @@
 document.addEventListener('DOMContentLoaded', () => {
   initThemeToggle();
   initNavigation();
+  initMobileMenu();
   initTerminalRunner();
   initSkillsFilter();
   initResumeModal();
@@ -63,6 +64,49 @@ function initNavigation() {
         link.classList.add('active');
       }
     });
+  });
+}
+
+/* ----------------------------------------------------
+ * 2.1. Mobile Navigation Menu Toggle
+ * ---------------------------------------------------- */
+function initMobileMenu() {
+  const toggleBtn = document.getElementById('mobileMenuToggle');
+  const navLinks = document.getElementById('navLinks');
+  const iconOpen = document.getElementById('menuIconOpen');
+  const iconClose = document.getElementById('menuIconClose');
+
+  if (!toggleBtn || !navLinks) return;
+
+  toggleBtn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    const isOpen = navLinks.classList.toggle('mobile-open');
+    if (iconOpen && iconClose) {
+      iconOpen.style.display = isOpen ? 'none' : 'block';
+      iconClose.style.display = isOpen ? 'block' : 'none';
+    }
+  });
+
+  // Close mobile drawer when clicking any nav link
+  navLinks.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      navLinks.classList.remove('mobile-open');
+      if (iconOpen && iconClose) {
+        iconOpen.style.display = 'block';
+        iconClose.style.display = 'none';
+      }
+    });
+  });
+
+  // Close when clicking outside navbar
+  document.addEventListener('click', (e) => {
+    if (!toggleBtn.contains(e.target) && !navLinks.contains(e.target)) {
+      navLinks.classList.remove('mobile-open');
+      if (iconOpen && iconClose) {
+        iconOpen.style.display = 'block';
+        iconClose.style.display = 'none';
+      }
+    }
   });
 }
 
