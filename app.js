@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initThemeToggle();
   initNavigation();
   initMobileMenu();
+  initExperienceExpand();
   initTerminalRunner();
   initSkillsFilter();
   initResumeModal();
@@ -106,6 +107,29 @@ function initMobileMenu() {
         iconOpen.style.display = 'block';
         iconClose.style.display = 'none';
       }
+    }
+  });
+}
+
+/* ----------------------------------------------------
+ * 2.2. Work Experience Bullet Expand / Collapse Toggle
+ * ---------------------------------------------------- */
+function initExperienceExpand() {
+  const toggleBtn = document.getElementById('toggleExpBtn');
+  const expBullets = document.getElementById('expBullets');
+  const btnText = document.getElementById('expBtnText');
+
+  if (!toggleBtn || !expBullets) return;
+
+  toggleBtn.addEventListener('click', () => {
+    const isExpanded = expBullets.classList.toggle('expanded');
+    toggleBtn.classList.toggle('expanded', isExpanded);
+    toggleBtn.setAttribute('aria-expanded', isExpanded);
+
+    if (btnText) {
+      btnText.textContent = isExpanded 
+        ? 'Show Less Responsibilities' 
+        : 'Show More Responsibilities (6 More)';
     }
   });
 }

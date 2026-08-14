@@ -733,6 +733,49 @@ a {
   font-weight: bold;
 }
 
+/* Expand / Collapse Experience Bullet List */
+.timeline-bullets .extra-bullet {
+  display: none;
+  opacity: 0;
+}
+
+.timeline-bullets.expanded .extra-bullet {
+  display: list-item;
+  opacity: 1;
+  animation: fadeIn 0.35s ease forwards;
+}
+
+.expand-experience-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 1.25rem;
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius-md);
+  background: rgba(16, 185, 129, 0.08);
+  border: 1px solid rgba(16, 185, 129, 0.25);
+  color: var(--primary-emerald);
+  font-family: var(--font-heading);
+  font-size: 0.88rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.expand-experience-btn:hover {
+  background: rgba(16, 185, 129, 0.18);
+  border-color: var(--primary-emerald);
+  transform: translateY(-1px);
+}
+
+.expand-experience-btn .chevron-icon {
+  transition: transform var(--transition-smooth);
+}
+
+.expand-experience-btn.expanded .chevron-icon {
+  transform: rotate(180deg);
+}
+
 /* Projects Section */
 .projects-grid {
   display: grid;
