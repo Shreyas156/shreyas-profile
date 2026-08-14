@@ -25,19 +25,29 @@ function initThemeToggle() {
   const sunIcon = `<circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/>`;
   const moonIcon = `<path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/>`;
 
-  // Saved theme or default dark
-  const savedTheme = localStorage.getItem('shreyas_theme') || 'dark';
-  html.setAttribute('data-theme', savedTheme);
-  themeIcon.innerHTML = savedTheme === 'dark' ? sunIcon : moonIcon;
+  function applyTheme(theme, notify = false) {
+    html.setAttribute('data-theme', theme);
+    localStorage.setItem('shreyas_theme', theme);
+    if (themeIcon) {
+      themeIcon.innerHTML = theme === 'dark' ? sunIcon : moonIcon;
+    }
+    if (notify) {
+      showToast(`Switched to ${theme === 'dark' ? 'Dark' : 'Light'} mode`);
+    }
+  }
 
-  themeBtn.addEventListener('click', () => {
-    const currentTheme = html.getAttribute('data-theme');
-    const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-    html.setAttribute('data-theme', newTheme);
-    localStorage.setItem('shreyas_theme', newTheme);
-    themeIcon.innerHTML = newTheme === 'dark' ? sunIcon : moonIcon;
-    showToast(`Switched to ${newTheme} mode`);
-  });
+  // Load saved theme or default dark
+  const savedTheme = localStorage.getItem('shreyas_theme') || 'dark';
+  applyTheme(savedTheme, false);
+
+  if (themeBtn) {
+    themeBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      const currentTheme = html.getAttribute('data-theme') || 'dark';
+      const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+      applyTheme(newTheme, true);
+    });
+  }
 }
 
 /* ----------------------------------------------------
